@@ -16,8 +16,6 @@ my $default_handler = sub {
     $c->render(json => \%hash);
 };
 
-my %route = ('/' => $default_handler);
-
-get(%route);
+get '/' => $default_handler;
 
 app->start;
